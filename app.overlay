@@ -1,3 +1,13 @@
 / {
-    
+    appLeds: appLeds{
+        compatible = "gpio-leds";
+        led_d0: led_d0{
+            gpios= <&gpio2 9 GPIO_ACTIVE_HIGH>;
+            label = "Application heart beat";
+        };
+    };
+
+    aliases {
+        heartbeat = &led_d0;
+    };
 };
