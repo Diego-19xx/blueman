@@ -1,3 +1,21 @@
 manifest:
   # lowest version of the manifest file schema that can parse this file’s data
   version: 0.8
+  
+  self:
+    path: app
+    
+  projects:
+    - name: zephyr
+      # indicate the zephyr version we will use
+      revision: v4.2.0
+      # point to official github repo
+      url: https://github.com/zephyrproject-rtos/zephyr
+      # place zephyr source code into a directory called deps
+      # and get the cmsis, segger and nordic HALs
+      import:
+        path-prefix: deps
+        name-allowlist:
+          - cmsis
+          - hal_nordic
+          - segger
