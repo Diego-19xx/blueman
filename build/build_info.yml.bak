@@ -1,4 +1,0 @@
-west:
-  command: /opt/python/venv/bin/west build
-  topdir: /home/user/workspace
-  version: 1.4.0
