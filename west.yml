@@ -8,7 +8,7 @@ manifest:
   projects:
     - name: zephyr
       # indicate the zephyr version we will use
-      revision: v4.2.0
+      revision: v4.1.0
       # point to official github repo
       url: https://github.com/zephyrproject-rtos/zephyr
       # place zephyr source code into a directory called deps
