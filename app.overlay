@@ -9,5 +9,17 @@
 
     aliases {
         heartbeat = &led_d0;
+        serial = &uart20;
     };
+};
+
+/*config the uart 2 at 115200 bauds and set the serial pins as uart*/
+&uart20 {	
+    current-speed = <115200>;
+    stop-bits = "1";
+    data-bits = <8>;
+    parity = "none";
+    pinctrl-0 = <&uart20_default>;
+    pinctrl-1 = <&uart20_sleep>;
+    pinctrl-names = "default","sleep";
 };
